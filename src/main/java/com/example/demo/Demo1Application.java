@@ -7,49 +7,20 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import static com.example.demo.Errors.*;
+
 @SpringBootApplication
 @RestController
 @CrossOrigin(origins = "*")
 public class Demo1Application {
-//    private final List<Player> players = new ArrayList<>();
+
     private List<User> users = new ArrayList<>();
 
-//    @PostConstruct
-//    public void init() {
-//        players.add(new Player("Harry", "Kane", 12));
-//        players.add(new Player("Leo", "Messi", 15));
-//        players.add(new Player("Kilian", "MBape", 18));
-//    }
-//
     public static void main(String[] args) {
         SpringApplication.run(Demo1Application.class, args);
     }
 
-//    @RequestMapping(value = "/", method = {RequestMethod.GET, RequestMethod.POST})
-//    public List<String> hello() {
-//        return List.of("Hello", "world for server");
-//    }
-//
-//    @RequestMapping(value = "/random", method = {RequestMethod.GET, RequestMethod.POST})
-//    public RandomNumber random() {
-//        return new RandomNumber();
-//    }
-//
-//    @RequestMapping(value = "/player", method = {RequestMethod.GET, RequestMethod.POST})
-//    public Object player(int number) {
-//        return this.players.get(number);
-//    }
-//
-//    @RequestMapping(value = "/all-player", method = {RequestMethod.GET, RequestMethod.POST})
-//    public Object allPlayer() {
-//        return this.players;
-//    }
-
-//    @RequestMapping(value = "/clean/{number}", method = {RequestMethod.GET, RequestMethod.POST})
-//    public Object clean(@PathVariable int number) {
-//        return this.players.get(number);
-//    }
 
     @RequestMapping(value = "/sign-up", method = {RequestMethod.GET, RequestMethod.POST})
     public Object user(String username, String password, String password2) {
@@ -123,7 +94,6 @@ public class Demo1Application {
         }
         return user;
     }
-
 
 
 }
